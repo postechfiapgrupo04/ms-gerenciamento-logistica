@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="br.com.fiap.mslogistica.MslogisticaApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-07-10T00:59:56" hostname="psnbk-629" time="0.314">
+<testsuite name="br.com.fiap.mslogistica.MslogisticaApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-07-12T22:48:04" hostname="psnbk-629" time="0.363">
   <properties/>
-  <testcase name="contextLoads()" classname="br.com.fiap.mslogistica.MslogisticaApplicationTests" time="0.314"/>
-  <system-out><![CDATA[21:59:54.238 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [br.com.fiap.mslogistica.MslogisticaApplicationTests]: MslogisticaApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-21:59:54.296 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration br.com.fiap.mslogistica.MslogisticaApplication for test class br.com.fiap.mslogistica.MslogisticaApplicationTests
+  <testcase name="contextLoads()" classname="br.com.fiap.mslogistica.MslogisticaApplicationTests" time="0.363"/>
+  <system-out><![CDATA[19:48:00.836 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [br.com.fiap.mslogistica.MslogisticaApplicationTests]: MslogisticaApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+19:48:00.921 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration br.com.fiap.mslogistica.MslogisticaApplication for test class br.com.fiap.mslogistica.MslogisticaApplicationTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -14,24 +14,133 @@
 
  :: Spring Boot ::                (v3.3.1)
 
-2024-07-09T21:59:54.589-03:00  INFO 195535 --- [mslogistica] [    Test worker] b.c.f.m.MslogisticaApplicationTests      : Starting MslogisticaApplicationTests using Java 17.0.11 with PID 195535 (started by brunoaraujo in /home/brunoaraujo/repos/postech-fiap/ms-logistica)
-2024-07-09T21:59:54.591-03:00  INFO 195535 --- [mslogistica] [    Test worker] b.c.f.m.MslogisticaApplicationTests      : No active profile set, falling back to 1 default profile: "default"
-2024-07-09T21:59:54.982-03:00  INFO 195535 --- [mslogistica] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-07-09T21:59:55.010-03:00  INFO 195535 --- [mslogistica] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 2 JPA repository interfaces.
-2024-07-09T21:59:55.243-03:00  INFO 195535 --- [mslogistica] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-07-09T21:59:55.268-03:00  INFO 195535 --- [mslogistica] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-07-09T21:59:55.286-03:00  INFO 195535 --- [mslogistica] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-07-09T21:59:55.432-03:00  INFO 195535 --- [mslogistica] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-07-09T21:59:55.445-03:00  INFO 195535 --- [mslogistica] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-07-09T21:59:55.447-03:00  WARN 195535 --- [mslogistica] [    Test worker] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
-2024-07-09T21:59:55.644-03:00  INFO 195535 --- [mslogistica] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@79b8ecb
-2024-07-09T21:59:55.646-03:00  INFO 195535 --- [mslogistica] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-07-09T21:59:55.658-03:00  WARN 195535 --- [mslogistica] [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-07-09T21:59:55.659-03:00  WARN 195535 --- [mslogistica] [    Test worker] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2024-07-09T21:59:56.078-03:00  INFO 195535 --- [mslogistica] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-07-09T21:59:56.102-03:00  INFO 195535 --- [mslogistica] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-07-09T21:59:56.330-03:00  WARN 195535 --- [mslogistica] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-07-09T21:59:56.637-03:00  INFO 195535 --- [mslogistica] [    Test worker] b.c.f.m.MslogisticaApplicationTests      : Started MslogisticaApplicationTests in 2.262 seconds (process running for 2.834)
+2024-07-12T19:48:01.223-03:00  INFO 442092 --- [mslogistica] [    Test worker] b.c.f.m.MslogisticaApplicationTests      : Starting MslogisticaApplicationTests using Java 17.0.11 with PID 442092 (started by brunoaraujo in /home/brunoaraujo/repos/postech-fiap/ms-logistica)
+2024-07-12T19:48:01.225-03:00  INFO 442092 --- [mslogistica] [    Test worker] b.c.f.m.MslogisticaApplicationTests      : No active profile set, falling back to 1 default profile: "default"
+2024-07-12T19:48:01.647-03:00  INFO 442092 --- [mslogistica] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-12T19:48:01.681-03:00  INFO 442092 --- [mslogistica] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 2 JPA repository interfaces.
+2024-07-12T19:48:02.066-03:00  INFO 442092 --- [mslogistica] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-12T19:48:02.096-03:00  INFO 442092 --- [mslogistica] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-12T19:48:02.119-03:00  INFO 442092 --- [mslogistica] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-12T19:48:02.296-03:00  INFO 442092 --- [mslogistica] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-12T19:48:02.313-03:00  INFO 442092 --- [mslogistica] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-12T19:48:02.315-03:00  WARN 442092 --- [mslogistica] [    Test worker] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2024-07-12T19:48:02.512-03:00  INFO 442092 --- [mslogistica] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2a65e237
+2024-07-12T19:48:02.514-03:00  INFO 442092 --- [mslogistica] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-12T19:48:02.526-03:00  WARN 442092 --- [mslogistica] [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-07-12T19:48:02.527-03:00  WARN 442092 --- [mslogistica] [    Test worker] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-07-12T19:48:03.190-03:00  INFO 442092 --- [mslogistica] [    Test worker] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: br.com.fiap.mslogistica.model.Address (class must be instantiated by Interceptor)
+2024-07-12T19:48:03.284-03:00  INFO 442092 --- [mslogistica] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-12T19:48:03.319-03:00  INFO 442092 --- [mslogistica] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-12T19:48:03.647-03:00  WARN 442092 --- [mslogistica] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-12T19:48:04.092-03:00  INFO 442092 --- [mslogistica] [    Test worker] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:29092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-teste-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = teste
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2024-07-12T19:48:04.133-03:00  INFO 442092 --- [mslogistica] [    Test worker] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2024-07-12T19:48:04.246-03:00  INFO 442092 --- [mslogistica] [    Test worker] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.0
+2024-07-12T19:48:04.247-03:00  INFO 442092 --- [mslogistica] [    Test worker] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 2ae524ed625438c5
+2024-07-12T19:48:04.247-03:00  INFO 442092 --- [mslogistica] [    Test worker] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1720824484246
+2024-07-12T19:48:04.250-03:00  INFO 442092 --- [mslogistica] [    Test worker] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-teste-1, groupId=teste] Subscribed to topic(s): order-logistic
+2024-07-12T19:48:04.268-03:00  INFO 442092 --- [mslogistica] [    Test worker] b.c.f.m.MslogisticaApplicationTests      : Started MslogisticaApplicationTests in 3.237 seconds (process running for 3.898)
+2024-07-12T19:48:04.485-03:00  INFO 442092 --- [mslogistica] [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-teste-1, groupId=teste] Cluster ID: zvJS9ZMhQMSkgNlNVOFYaQ
+2024-07-12T19:48:04.486-03:00  INFO 442092 --- [mslogistica] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-teste-1, groupId=teste] Discovered group coordinator localhost:29092 (id: 2147483646 rack: null)
+2024-07-12T19:48:04.489-03:00  INFO 442092 --- [mslogistica] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-teste-1, groupId=teste] (Re-)joining group
+2024-07-12T19:48:04.501-03:00  INFO 442092 --- [mslogistica] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-teste-1, groupId=teste] Request joining group due to: need to re-join with the given member-id: consumer-teste-1-81795070-0905-46e6-bb78-27697fbba33f
+2024-07-12T19:48:04.502-03:00  INFO 442092 --- [mslogistica] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-teste-1, groupId=teste] (Re-)joining group
 ]]></system-out>
   <system-err><![CDATA[Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
 ]]></system-err>

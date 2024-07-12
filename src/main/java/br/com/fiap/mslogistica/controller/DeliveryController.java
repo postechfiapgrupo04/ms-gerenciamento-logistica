@@ -1,7 +1,7 @@
 package br.com.fiap.mslogistica.controller;
 
 import br.com.fiap.mslogistica.model.Delivery;
-import br.com.fiap.mslogistica.model.DeliveryDriver;
+import br.com.fiap.mslogistica.model.request.UpdateStatusRequest;
 import br.com.fiap.mslogistica.repository.DeliveryDriverRepository;
 import br.com.fiap.mslogistica.service.DeliveryService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,11 +23,11 @@ public class DeliveryController {
         this.deliveryService = deliveryService;
     }
 
-    @PostMapping("/assignDeliveryDriver")
-    public Delivery assignDeliveryDriver(@RequestBody Delivery delivery) {
-        Optional<DeliveryDriver> deliveryDriver = Optional.ofNullable(deliveryDriverRepository.findById(delivery.getDeliveryDriverId())
-                .orElseThrow(() -> new RuntimeException("Entregador não encontrado. ID: " + delivery.getDeliveryDriverId())));
-        return deliveryService.assignDelivery(delivery);
+    @PostMapping("/updateDeliveryStatus")
+    public Optional<Delivery> updateDeliveryStatus(@RequestBody UpdateStatusRequest updateStatusRequest) {
+        if (updateStatusRequest.getOrderId() == null)
+            throw new RuntimeException("OrderId não pode estar vazio");
+        return deliveryService.updateDeliveryStatus(updateStatusRequest);
     }
 
     @GetMapping("/findDeliverys")
