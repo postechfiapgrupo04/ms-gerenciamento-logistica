@@ -26,7 +26,7 @@ import java.util.UUID;
 @Service
 public class DeliveryService {
 
-    private final String stockUrl = "http://localhost:8084/user";
+    private final String stockUrl = "http://localhost:8001/user";
 
     private static final Logger log = LoggerFactory.getLogger(DeliveryService.class);
     private final DeliveryRepository deliveryRepository;

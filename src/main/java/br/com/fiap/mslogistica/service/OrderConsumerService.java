@@ -9,6 +9,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 
+import java.util.UUID;
+
 @Service
 public class OrderConsumerService {
 
@@ -26,9 +28,9 @@ public class OrderConsumerService {
         ObjectMapper objectMapper = new ObjectMapper();
         try {
             OrderDTO orderDTO = objectMapper.readValue(order, OrderDTO.class);
-            DeliveryRequest deliveryRequest = new DeliveryRequest(orderDTO.getIdOrder(), orderDTO.getCustomerId());
+            DeliveryRequest deliveryRequest = new DeliveryRequest(UUID.fromString(orderDTO.getIdOrder()), UUID.fromString(orderDTO.getCustomerId()));
             deliveryService.assignDelivery(deliveryRequest);
-        } catch (JsonProcessingException e) {
+        } catch (Exception e) {
             throw new RuntimeException("Erro ao converter String para OrderDTO: ", e);
         }
     }
