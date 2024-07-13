@@ -16,15 +16,13 @@ spring:
       mode: always
   kafka:
     consumer:
-      auto-offset-reset: earliest
       bootstrap-servers: localhost:29092
       group-id: teste
+      auto-offset-reset: earliest
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
-      properties:
-        spring.json.trusted.packages: '*' # change this with your even
-  topic:
-    order-logistic: order-logistic
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+topic:
+  order-logistic: order-logistic
 
   threads:
     virtual:
