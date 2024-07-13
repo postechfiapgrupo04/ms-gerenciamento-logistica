@@ -83,4 +83,8 @@ public class DeliveryService {
     public List<Delivery> findDeliverys() {
         return deliveryRepository.findAll();
     }
+
+    public Delivery findByOrderId(UUID orderId) {
+        return deliveryRepository.findByOrderId(orderId);
+    }
 }

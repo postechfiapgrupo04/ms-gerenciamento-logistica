@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/delivery")
@@ -33,6 +34,11 @@ public class DeliveryController {
     @GetMapping("/findDeliverys")
     public List<Delivery> findDeliverys() {
         return deliveryService.findDeliverys();
+    }
+
+    @GetMapping("/findByOrderId")
+    public Delivery findByOrderId(@RequestParam UUID orderId) {
+        return deliveryService.findByOrderId(orderId);
     }
 
 }
