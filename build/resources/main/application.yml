@@ -14,6 +14,23 @@ spring:
   sql:
     init:
       mode: always
+  kafka:
+    consumer:
+      auto-offset-reset: earliest
+      bootstrap-servers: localhost:29092
+      group-id: teste
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: '*' # change this with your even
+  topic:
+    order-logistic: order-logistic
+
   threads:
     virtual:
       enabled: true
+server:
+  compression:
+    enabled: 'true'
+  port: 8006
+  forward-headers-strategy: native

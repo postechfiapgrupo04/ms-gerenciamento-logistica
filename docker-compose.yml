@@ -1,15 +1,4 @@
 services:
-  app:
-    build: .
-    ports:
-      - "8082:8080"
-    environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://myDB:3306/tb_logistica
-      SPRING_DATASOURCE_USERNAME: root
-      SPRING_DATASOURCE_PASSWORD: root
-    depends_on:
-      - myDB
-
   myDB:
     image: mysql:5.7
     restart: always

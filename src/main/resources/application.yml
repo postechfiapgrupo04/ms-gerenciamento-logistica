@@ -14,6 +14,21 @@ spring:
   sql:
     init:
       mode: always
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:29092
+      group-id: teste
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+topic:
+  order-logistic: order-logistic
+
   threads:
     virtual:
       enabled: true
+server:
+  compression:
+    enabled: 'true'
+  port: 8006
+  forward-headers-strategy: native
