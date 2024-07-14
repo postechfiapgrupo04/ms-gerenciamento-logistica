@@ -22,20 +22,18 @@ public class DeliveryService {
 
     private static final Logger log = LoggerFactory.getLogger(DeliveryService.class);
     private final DeliveryRepository deliveryRepository;
-    private final DeliveryDriverRepository deliveryDriverRepository;
     private final EnderecoService enderecoService;
     private final DeliveryDriverService deliveryDriverService;
 
     //TODO trocar todos os repository por service
-    public DeliveryService(DeliveryRepository deliveryRepository, DeliveryDriverRepository deliveryDriverRepository, EnderecoService enderecoService, DeliveryDriverService deliveryDriverService) {
+    public DeliveryService(DeliveryRepository deliveryRepository, EnderecoService enderecoService, DeliveryDriverService deliveryDriverService, DeliveryService deliveryService) {
         this.deliveryRepository = deliveryRepository;
-        this.deliveryDriverRepository = deliveryDriverRepository;
         this.enderecoService = enderecoService;
         this.deliveryDriverService = deliveryDriverService;
     }
 
     public void assignDelivery(DeliveryRequest deliveryRequest) {
-        Optional<DeliveryDriver> availableDriverOptional = Optional.ofNullable(getDeliveryDriverAvailable()
+        Optional<DeliveryDriver> availableDriverOptional = Optional.ofNullable(deliveryDriverService.getDeliveryDriverAvailable()
                 .orElseThrow(() -> new RuntimeException("Nenhum motorista está disponível")));
 
         ResponseEntity<Client> client = getClientInfo(deliveryRequest.getCustomerId());
@@ -52,21 +50,12 @@ public class DeliveryService {
         }));
     }
 
-
     private ResponseEntity<Client> getClientInfo(UUID customerId) {
         RestTemplate restTemplate = new RestTemplate();
         String url = stockUrl + "/id?id=" + customerId;
         return restTemplate.getForEntity(url, Client.class);
     }
 
-    private Optional<DeliveryDriver> getDeliveryDriverAvailable() {
-        return deliveryDriverRepository.findAll()
-                .stream()
-                .filter(driver -> driver.getNumberOfDeliveries() < 15)
-                .findFirst();
-    }
-
-    //TODO passar para DeliveryDriverService
     public Optional<Delivery> updateDeliveryStatus(UpdateStatusRequest updateStatusRequest) {
         Optional<Delivery> optionalDelivery = Optional.ofNullable(deliveryRepository.findByOrderId(updateStatusRequest.getOrderId()));
         optionalDelivery.ifPresent(delivery -> {

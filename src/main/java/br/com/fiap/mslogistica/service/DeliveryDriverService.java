@@ -36,4 +36,11 @@ public class DeliveryDriverService {
             deliveryDriverRepository.save(deliveryDriver);
         });
     }
+
+    public Optional<DeliveryDriver> getDeliveryDriverAvailable() {
+        return deliveryDriverRepository.findAll()
+                .stream()
+                .filter(driver -> driver.getNumberOfDeliveries() < 15)
+                .findFirst();
+    }
 }
