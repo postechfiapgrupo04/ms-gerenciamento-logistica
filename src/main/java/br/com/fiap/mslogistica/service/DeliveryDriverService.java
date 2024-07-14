@@ -1,5 +1,6 @@
 package br.com.fiap.mslogistica.service;
 
+import br.com.fiap.mslogistica.model.Delivery;
 import br.com.fiap.mslogistica.model.DeliveryDriver;
 import br.com.fiap.mslogistica.repository.DeliveryDriverRepository;
 import org.springframework.stereotype.Service;
@@ -26,5 +27,13 @@ public class DeliveryDriverService {
 
     public Optional<DeliveryDriver> findDeliveryDriverById(Long id) {
         return deliveryDriverRepository.findById(id);
+    }
+
+    public void addDelivery(DeliveryDriver deliveryDriver1) {
+        Optional<DeliveryDriver> deliveryDriverOptional = findDeliveryDriverById(deliveryDriver1.getId());
+        deliveryDriverOptional.ifPresent(deliveryDriver -> {
+            deliveryDriver.setNumberOfDeliveries(deliveryDriver.getNumberOfDeliveries() + 1);
+            deliveryDriverRepository.save(deliveryDriver);
+        });
     }
 }

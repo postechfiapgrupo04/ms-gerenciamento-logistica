@@ -24,15 +24,18 @@ public class DeliveryService {
     private final DeliveryRepository deliveryRepository;
     private final DeliveryDriverRepository deliveryDriverRepository;
     private final EnderecoService enderecoService;
+    private final DeliveryDriverService deliveryDriverService;
 
-    public DeliveryService(DeliveryRepository deliveryRepository, DeliveryDriverRepository deliveryDriverRepository, EnderecoService enderecoService) {
+    //TODO trocar todos os repository por service
+    public DeliveryService(DeliveryRepository deliveryRepository, DeliveryDriverRepository deliveryDriverRepository, EnderecoService enderecoService, DeliveryDriverService deliveryDriverService) {
         this.deliveryRepository = deliveryRepository;
         this.deliveryDriverRepository = deliveryDriverRepository;
         this.enderecoService = enderecoService;
+        this.deliveryDriverService = deliveryDriverService;
     }
 
     public void assignDelivery(DeliveryRequest deliveryRequest) {
-        Optional<DeliveryDriver> availableDriver = Optional.ofNullable(getDeliveryDriverAvailable()
+        Optional<DeliveryDriver> availableDriverOptional = Optional.ofNullable(getDeliveryDriverAvailable()
                 .orElseThrow(() -> new RuntimeException("Nenhum motorista está disponível")));
 
         ResponseEntity<Client> client = getClientInfo(deliveryRequest.getCustomerId());
@@ -41,16 +44,12 @@ public class DeliveryService {
         }
         Optional<Endereco> enderecoOptional = Optional.ofNullable(client.getBody().getEndereco());
 
-        enderecoOptional.ifPresent(endereco -> {
+        enderecoOptional.ifPresent(endereco -> availableDriverOptional.ifPresent(deliveryDriver -> {
             enderecoService.saveAddress(endereco);
-            Delivery delivery = new Delivery(availableDriver.get().getId(), deliveryRequest.getOrderId(), endereco, DeliveryStatus.CREATED);
+            deliveryDriverService.addDelivery(deliveryDriver);
+            Delivery delivery = new Delivery(deliveryDriver.getId(), deliveryRequest.getOrderId(), endereco, DeliveryStatus.CREATED);
             deliveryRepository.save(delivery);
-        });
-
-        //Optional<Endereco> enderecoOptional = Optional.ofNullable(client.getBody().getEndereco());
-        //Delivery delivery = new Delivery(availableDriver.get().getId(), deliveryRequest.getOrderId(), endereco, DeliveryStatus.CREATED);
-        //log.info("Delivery created: {}", delivery.getOrderId());
-
+        }));
     }
 
 
@@ -67,8 +66,8 @@ public class DeliveryService {
                 .findFirst();
     }
 
+    //TODO passar para DeliveryDriverService
     public Optional<Delivery> updateDeliveryStatus(UpdateStatusRequest updateStatusRequest) {
-        //TODO findByOrderId
         Optional<Delivery> optionalDelivery = Optional.ofNullable(deliveryRepository.findByOrderId(updateStatusRequest.getOrderId()));
         optionalDelivery.ifPresent(delivery -> {
             delivery.setStatus(updateStatusRequest.getStatus());
