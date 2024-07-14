@@ -28,10 +28,11 @@ public class OrderConsumerService {
         ObjectMapper objectMapper = new ObjectMapper();
         try {
             OrderDTO orderDTO = objectMapper.readValue(order, OrderDTO.class);
-            DeliveryRequest deliveryRequest = new DeliveryRequest(UUID.fromString(orderDTO.getIdOrder()), UUID.fromString(orderDTO.getCustomerId()));
+            //DeliveryRequest deliveryRequest = new DeliveryRequest(UUID.fromString(orderDTO.getIdOrder()), UUID.fromString(orderDTO.getCustomerId()));
+            DeliveryRequest deliveryRequest = new DeliveryRequest(orderDTO.getIdOrder(), orderDTO.getCustomerId());
             deliveryService.assignDelivery(deliveryRequest);
         } catch (Exception e) {
-            throw new RuntimeException("Erro ao converter String para OrderDTO: ", e);
+            throw new RuntimeException("Erro genérico ao converter OrderDTO ou persistir dados: ", e);
         }
     }
 

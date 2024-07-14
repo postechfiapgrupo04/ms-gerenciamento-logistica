@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.boot.autoconfigure.amqp.RabbitConnectionDetails;
+import org.springframework.http.ResponseEntity;
 
 import java.util.Optional;
 import java.util.UUID;
@@ -31,16 +33,14 @@ public class Delivery {
     @Enumerated(EnumType.STRING)
     private DeliveryStatus status;
 
-    /*
     @ManyToOne
-    @JoinColumn(name = "address_id")
-    private Address address;
-     */
+    @JoinColumn(name = "endereco_id")
+    private Endereco endereco;
 
-    public Delivery(Long deliveryDriverId, UUID orderId, /*Long addressId,*/ DeliveryStatus status) {
+    public Delivery(Long deliveryDriverId, UUID orderId, Endereco endereco, DeliveryStatus status) {
         this.deliveryDriverId = deliveryDriverId;
         this.orderId = orderId;
         this.status = status;
-        //this.address.setId(addressId);
+        this.endereco = endereco;
     }
 }

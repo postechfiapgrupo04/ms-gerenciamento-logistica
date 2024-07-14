@@ -3,6 +3,7 @@ package br.com.fiap.mslogistica.model.dto;
 import lombok.*;
 
 import java.util.List;
+import java.util.UUID;
 
 @Getter
 @Setter
@@ -11,8 +12,8 @@ import java.util.List;
 @NoArgsConstructor
 public class OrderDTO {
 
-    private String idOrder;
-    private String customerId;
+    private UUID idOrder;
+    private UUID customerId;
     private String status;
     private List<OrderItemDTO> items;
 
