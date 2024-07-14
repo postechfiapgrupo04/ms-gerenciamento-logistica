@@ -1,8 +1,8 @@
 # ms-logistica
-Projeto de microsserviço responsável por toda a logística relacionada à entrega de pedidos, desde a atribuição de entregadores até o rastreamento das entregas em tempo real e fornecimento de atualizações de status aos clientes. 
+Projeto de microsserviço responsável por toda a logística relacionada à entrega de pedidos, desde a atribuição de entregadores até o rastreamento das entregas em tempo real e fornecimento de atualizações de status aos clientes. <br />
 
-Este microsserviço faz parte de um Sistema de Gerenciamento de Pedidos, que tem como propósito criar um sistema modular onde cada microsserviço desempenha um papel no gerenciamento de pedidos.
-Este sistema não apenas facilitará a gestão eficiente de pedidos, mas também servirá como um exemplo prático do uso de tecnologias de ponta em um cenário realista de desenvolvimento de software
+Este microsserviço faz parte de um Sistema de Gerenciamento de Pedidos, que tem como propósito criar um sistema modular onde cada microsserviço desempenha um papel no gerenciamento de pedidos.<br />
+Este sistema não apenas facilitará a gestão eficiente de pedidos, mas também servirá como um exemplo prático do uso de tecnologias de ponta em um cenário realista de desenvolvimento de software<br />
 
 ## 💻 Pré-requisitos
 
@@ -13,10 +13,10 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
 - Gradle
 
 ## :triangular_flag_on_post: Microsserviços relacionados
-api-gateway -> https://github.com/postechfiapgrupo04/api-gateway
-ms-clientes -> https://github.com/postechfiapgrupo04/ms-gerenciamento-clientes
-ms-pedidos -> https://github.com/postechfiapgrupo04/ms-gerenciamento-pedidos
-ms-produtos -> https://github.com/postechfiapgrupo04/ms-gerenciamento-produtos
+api-gateway -> https://github.com/postechfiapgrupo04/api-gateway<br />
+ms-clientes -> https://github.com/postechfiapgrupo04/ms-gerenciamento-clientes<br />
+ms-pedidos -> https://github.com/postechfiapgrupo04/ms-gerenciamento-pedidos<br />
+ms-produtos -> https://github.com/postechfiapgrupo04/ms-gerenciamento-produtos<br />
 
 
 ## 🚀 Instalando ms-logistica
