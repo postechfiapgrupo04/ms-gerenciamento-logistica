@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.363s</div>
+<div class="counter">0.374s</div>
 <p>duration</p>
 </div>
 </td>
@@ -82,7 +82,7 @@
 </thead>
 <tr>
 <td class="success">contextLoads()</td>
-<td class="success">0.363s</td>
+<td class="success">0.374s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -90,8 +90,8 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>19:48:00.836 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [br.com.fiap.mslogistica.MslogisticaApplicationTests]: MslogisticaApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-19:48:00.921 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration br.com.fiap.mslogistica.MslogisticaApplication for test class br.com.fiap.mslogistica.MslogisticaApplicationTests
+<pre>15:00:10.394 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [br.com.fiap.mslogistica.MslogisticaApplicationTests]: MslogisticaApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+15:00:10.457 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration br.com.fiap.mslogistica.MslogisticaApplication for test class br.com.fiap.mslogistica.MslogisticaApplicationTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -102,25 +102,25 @@
 
  :: Spring Boot ::                (v3.3.1)
 
-2024-07-12T19:48:01.223-03:00  INFO 442092 --- [mslogistica] [    Test worker] b.c.f.m.MslogisticaApplicationTests      : Starting MslogisticaApplicationTests using Java 17.0.11 with PID 442092 (started by brunoaraujo in /home/brunoaraujo/repos/postech-fiap/ms-logistica)
-2024-07-12T19:48:01.225-03:00  INFO 442092 --- [mslogistica] [    Test worker] b.c.f.m.MslogisticaApplicationTests      : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2024-07-12T19:48:01.647-03:00  INFO 442092 --- [mslogistica] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-07-12T19:48:01.681-03:00  INFO 442092 --- [mslogistica] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 2 JPA repository interfaces.
-2024-07-12T19:48:02.066-03:00  INFO 442092 --- [mslogistica] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-07-12T19:48:02.096-03:00  INFO 442092 --- [mslogistica] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-07-12T19:48:02.119-03:00  INFO 442092 --- [mslogistica] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-07-12T19:48:02.296-03:00  INFO 442092 --- [mslogistica] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-07-12T19:48:02.313-03:00  INFO 442092 --- [mslogistica] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-07-12T19:48:02.315-03:00  WARN 442092 --- [mslogistica] [    Test worker] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
-2024-07-12T19:48:02.512-03:00  INFO 442092 --- [mslogistica] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2a65e237
-2024-07-12T19:48:02.514-03:00  INFO 442092 --- [mslogistica] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-07-12T19:48:02.526-03:00  WARN 442092 --- [mslogistica] [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-07-12T19:48:02.527-03:00  WARN 442092 --- [mslogistica] [    Test worker] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2024-07-12T19:48:03.190-03:00  INFO 442092 --- [mslogistica] [    Test worker] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: br.com.fiap.mslogistica.model.Address (class must be instantiated by Interceptor)
-2024-07-12T19:48:03.284-03:00  INFO 442092 --- [mslogistica] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-07-12T19:48:03.319-03:00  INFO 442092 --- [mslogistica] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-07-12T19:48:03.647-03:00  WARN 442092 --- [mslogistica] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-07-12T19:48:04.092-03:00  INFO 442092 --- [mslogistica] [    Test worker] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+2024-07-14T15:00:10.715-03:00  INFO 588557 --- [mslogistica] [    Test worker] b.c.f.m.MslogisticaApplicationTests      : Starting MslogisticaApplicationTests using Java 17.0.11 with PID 588557 (started by brunoaraujo in /home/brunoaraujo/repos/postech-fiap/ms-logistica)
+2024-07-14T15:00:10.716-03:00  INFO 588557 --- [mslogistica] [    Test worker] b.c.f.m.MslogisticaApplicationTests      : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2024-07-14T15:00:11.082-03:00  INFO 588557 --- [mslogistica] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-14T15:00:11.124-03:00  INFO 588557 --- [mslogistica] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37 ms. Found 3 JPA repository interfaces.
+2024-07-14T15:00:11.497-03:00  INFO 588557 --- [mslogistica] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-14T15:00:11.533-03:00  INFO 588557 --- [mslogistica] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-14T15:00:11.557-03:00  INFO 588557 --- [mslogistica] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-14T15:00:11.769-03:00  INFO 588557 --- [mslogistica] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-14T15:00:11.789-03:00  INFO 588557 --- [mslogistica] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-14T15:00:11.792-03:00  WARN 588557 --- [mslogistica] [    Test worker] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2024-07-14T15:00:11.979-03:00  INFO 588557 --- [mslogistica] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2382b2f
+2024-07-14T15:00:11.981-03:00  INFO 588557 --- [mslogistica] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-14T15:00:11.992-03:00  WARN 588557 --- [mslogistica] [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-07-14T15:00:11.993-03:00  WARN 588557 --- [mslogistica] [    Test worker] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-07-14T15:00:12.632-03:00  INFO 588557 --- [mslogistica] [    Test worker] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: br.com.fiap.mslogistica.model.Address (class must be instantiated by Interceptor)
+2024-07-14T15:00:12.718-03:00  INFO 588557 --- [mslogistica] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-14T15:00:12.766-03:00  INFO 588557 --- [mslogistica] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-14T15:00:13.002-03:00  WARN 588557 --- [mslogistica] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-14T15:00:13.355-03:00  INFO 588557 --- [mslogistica] [    Test worker] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
 	allow.auto.create.topics = true
 	auto.commit.interval.ms = 5000
 	auto.include.jmx.reporter = true
@@ -218,17 +218,17 @@
 	ssl.truststore.type = JKS
 	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
 
-2024-07-12T19:48:04.133-03:00  INFO 442092 --- [mslogistica] [    Test worker] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
-2024-07-12T19:48:04.246-03:00  INFO 442092 --- [mslogistica] [    Test worker] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.0
-2024-07-12T19:48:04.247-03:00  INFO 442092 --- [mslogistica] [    Test worker] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 2ae524ed625438c5
-2024-07-12T19:48:04.247-03:00  INFO 442092 --- [mslogistica] [    Test worker] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1720824484246
-2024-07-12T19:48:04.250-03:00  INFO 442092 --- [mslogistica] [    Test worker] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-teste-1, groupId=teste] Subscribed to topic(s): order-logistic
-2024-07-12T19:48:04.268-03:00  INFO 442092 --- [mslogistica] [    Test worker] b.c.f.m.MslogisticaApplicationTests      : Started MslogisticaApplicationTests in 3.237 seconds (process running for 3.898)
-2024-07-12T19:48:04.485-03:00  INFO 442092 --- [mslogistica] [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-teste-1, groupId=teste] Cluster ID: zvJS9ZMhQMSkgNlNVOFYaQ
-2024-07-12T19:48:04.486-03:00  INFO 442092 --- [mslogistica] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-teste-1, groupId=teste] Discovered group coordinator localhost:29092 (id: 2147483646 rack: null)
-2024-07-12T19:48:04.489-03:00  INFO 442092 --- [mslogistica] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-teste-1, groupId=teste] (Re-)joining group
-2024-07-12T19:48:04.501-03:00  INFO 442092 --- [mslogistica] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-teste-1, groupId=teste] Request joining group due to: need to re-join with the given member-id: consumer-teste-1-81795070-0905-46e6-bb78-27697fbba33f
-2024-07-12T19:48:04.502-03:00  INFO 442092 --- [mslogistica] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-teste-1, groupId=teste] (Re-)joining group
+2024-07-14T15:00:13.383-03:00  INFO 588557 --- [mslogistica] [    Test worker] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2024-07-14T15:00:13.473-03:00  INFO 588557 --- [mslogistica] [    Test worker] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.0
+2024-07-14T15:00:13.473-03:00  INFO 588557 --- [mslogistica] [    Test worker] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 2ae524ed625438c5
+2024-07-14T15:00:13.473-03:00  INFO 588557 --- [mslogistica] [    Test worker] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1720980013472
+2024-07-14T15:00:13.475-03:00  INFO 588557 --- [mslogistica] [    Test worker] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-teste-1, groupId=teste] Subscribed to topic(s): order-logistic
+2024-07-14T15:00:13.487-03:00  INFO 588557 --- [mslogistica] [    Test worker] b.c.f.m.MslogisticaApplicationTests      : Started MslogisticaApplicationTests in 2.934 seconds (process running for 3.576)
+2024-07-14T15:00:13.663-03:00  INFO 588557 --- [mslogistica] [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-teste-1, groupId=teste] Cluster ID: 8F2l20XjSNeQwRpJf6hjxQ
+2024-07-14T15:00:13.664-03:00  INFO 588557 --- [mslogistica] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-teste-1, groupId=teste] Discovered group coordinator localhost:29092 (id: 2147483646 rack: null)
+2024-07-14T15:00:13.665-03:00  INFO 588557 --- [mslogistica] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-teste-1, groupId=teste] (Re-)joining group
+2024-07-14T15:00:13.673-03:00  INFO 588557 --- [mslogistica] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-teste-1, groupId=teste] Request joining group due to: need to re-join with the given member-id: consumer-teste-1-d046c2b4-f97b-40f8-af98-d091778c02af
+2024-07-14T15:00:13.674-03:00  INFO 588557 --- [mslogistica] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-teste-1, groupId=teste] (Re-)joining group
 </pre>
 </span>
 </div>
@@ -247,7 +247,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.8</a> at 12 de jul. de 2024 19:48:07</p>
+<a href="http://www.gradle.org">Gradle 8.8</a> at 14 de jul. de 2024 15:00:37</p>
 </div>
 </div>
 </body>
