@@ -26,7 +26,7 @@ public class DeliveryService {
     private final DeliveryDriverService deliveryDriverService;
 
     //TODO trocar todos os repository por service
-    public DeliveryService(DeliveryRepository deliveryRepository, EnderecoService enderecoService, DeliveryDriverService deliveryDriverService, DeliveryService deliveryService) {
+    public DeliveryService(DeliveryRepository deliveryRepository, EnderecoService enderecoService, DeliveryDriverService deliveryDriverService) {
         this.deliveryRepository = deliveryRepository;
         this.enderecoService = enderecoService;
         this.deliveryDriverService = deliveryDriverService;

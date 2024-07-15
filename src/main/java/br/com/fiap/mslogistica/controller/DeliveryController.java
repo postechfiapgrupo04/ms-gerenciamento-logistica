@@ -2,9 +2,7 @@ package br.com.fiap.mslogistica.controller;
 
 import br.com.fiap.mslogistica.model.Delivery;
 import br.com.fiap.mslogistica.model.request.UpdateStatusRequest;
-import br.com.fiap.mslogistica.repository.DeliveryDriverRepository;
 import br.com.fiap.mslogistica.service.DeliveryService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,9 +12,6 @@ import java.util.UUID;
 @RestController
 @RequestMapping("/delivery")
 public class DeliveryController {
-
-    @Autowired
-    private DeliveryDriverRepository deliveryDriverRepository;
 
     private final DeliveryService deliveryService;
 
